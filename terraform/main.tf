@@ -1,21 +1,13 @@
 terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.16"
-    }
+  required_version = ">= 0.14.11, < 2.0.0"
+}
 
-    tls = {
-      source  = "hashicorp/tls"
-      version = ">=3.0"
-    }
-  }
-
-  required_version = ">= 1.2.0"
+variable "region" {
+  type = string
 }
 
 provider "aws" {
-  region = "eu-west-1"
+  region = var.region
 }
 
 provider "tls" {
