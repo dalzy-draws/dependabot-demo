@@ -17,3 +17,7 @@ updates:
     directory: "/terraform"
     schedule:
       interval: "daily"
+  - package-ecosystem: terraform
+    directory: "/terraform/subdir"
+    schedule:
+      interval: "daily"
