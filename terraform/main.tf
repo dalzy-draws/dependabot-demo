@@ -20,7 +20,7 @@ module "iam_example_iam-account" {
 
 module "s3_bucket" {
   source = "terraform-aws-modules/s3-bucket/aws"
-  version = "3.0.1"
+  version = "4.1.2"
 
   bucket = "my-s3-bucket"
   acl    = "private"
@@ -32,7 +32,7 @@ module "s3_bucket" {
 
 module "s3_bucket_2" {
   source = "terraform-aws-modules/s3-bucket/aws"
-  version = "3.2.4"
+  version = "4.1.2"
 
   bucket = "my-s3-bucket-2"
   acl    = "private"
