@@ -29,3 +29,15 @@ module "s3_bucket" {
     enabled = true
   }
 }
+
+module "s3_bucket_2" {
+  source = "terraform-aws-modules/s3-bucket/aws"
+  version = "3.2.4"
+
+  bucket = "my-s3-bucket-2"
+  acl    = "private"
+
+  versioning = {
+    enabled = true
+  }
+}
